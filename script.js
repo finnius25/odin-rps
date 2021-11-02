@@ -1,13 +1,14 @@
-const rps = ["rock", "paper", "scissor"];
-
 let playerPlay = () => {
     return prompt("Rock Paper Scissor GO!").toLowerCase();
 }
 
-let computerPlay = (options) => {
-    let i = Math.floor(Math.random() * options.length)
-    return options[i];
+let computerPlay = () => {
+    const rps = ["rock", "paper", "scissor"];
+    return rps[Math.floor(Math.random() * rps.length)]
 }
+
+let computerSelection = computerPlay();
+let playerSelection = playerPlay();
 
 let playRound = (playerSelection, computerSelection) => {
     if (playerSelection === "rock" && computerSelection === "paper") {
@@ -33,18 +34,16 @@ let playRound = (playerSelection, computerSelection) => {
     }
 }
 
-
-const computerSelection = computerPlay(rps);
-const playerSelection = playerPlay();
-
-console.log(playRound(playerSelection, computerSelection));
-
-
-
-
+let myGame = () => {
+    for (let i = 0; i < 5; i++) {
+        let computerSelection = computerPlay();
+        let playerSelection = playerPlay();
+        return console.log(playRound(playerSelection, computerSelection));
+    };
+}
 
 
-
+myGame();
 
 
 
