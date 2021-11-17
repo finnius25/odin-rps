@@ -1,16 +1,15 @@
-let playerPlay = () => {
+const playerPlay = () => {
     return prompt("Rock Paper Scissor GO!").toLowerCase();
 }
 
-let computerPlay = () => {
+const computerPlay = () => {
     const rps = ["rock", "paper", "scissor"];
     return rps[Math.floor(Math.random() * rps.length)]
 }
 
-let computerSelection = computerPlay();
-let playerSelection = playerPlay();
-
-let playRound = (playerSelection, computerSelection) => {
+const playRound = (playerSelection, computerSelection) => {
+    computerSelection = computerPlay();
+    playerSelection = playerPlay();
     if (playerSelection === "rock" && computerSelection === "paper") {
         return ("You lose! Paper beats Rock");
     } else if (playerSelection === "rock" && computerSelection === "scissor") {
@@ -34,16 +33,15 @@ let playRound = (playerSelection, computerSelection) => {
     }
 }
 
-let myGame = () => {
+const myGame = () => {
     for (let i = 0; i < 5; i++) {
-        let computerSelection = computerPlay();
-        let playerSelection = playerPlay();
-        return console.log(playRound(playerSelection, computerSelection));
+        alert(playRound());
     };
 }
 
-
 myGame();
+
+
 
 
 
