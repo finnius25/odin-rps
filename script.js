@@ -4,6 +4,7 @@ const computerPlay = () => {
     return rps[Math.floor(Math.random() * rps.length)]
 }
 
+
 const playRound = (playerSelection, computerSelection) => {
     computerSelection = computerPlay();
     if (playerSelection === "rock" && computerSelection === "paper") {
@@ -29,11 +30,22 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        return playerSelection = button.id;
-    });
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissor = document.querySelector('#scissor');
+
+rock.addEventListener('click', () => {
+    alert(playRound('rock'));
+});
+paper.addEventListener('click', () => {
+    alert(playRound('paper'));
+});
+scissor.addEventListener('click', () => {
+    alert(playRound('scissor'));
 });
 
-console.log(playerSelection);
+
+
+
+
+
