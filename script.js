@@ -1,6 +1,3 @@
-const playerPlay = () => {
-    return prompt("Rock Paper Scissor GO!").toLowerCase();
-}
 
 const computerPlay = () => {
     const rps = ["rock", "paper", "scissor"];
@@ -9,7 +6,6 @@ const computerPlay = () => {
 
 const playRound = (playerSelection, computerSelection) => {
     computerSelection = computerPlay();
-    playerSelection = playerPlay();
     if (playerSelection === "rock" && computerSelection === "paper") {
         return ("You lose! Paper beats Rock");
     } else if (playerSelection === "rock" && computerSelection === "scissor") {
@@ -33,15 +29,11 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
-const myGame = () => {
-    for (let i = 0; i < 5; i++) {
-        alert(playRound());
-    };
-}
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        return playerSelection = button.id;
+    });
+});
 
-myGame();
-
-
-
-
-
+console.log(playerSelection);
