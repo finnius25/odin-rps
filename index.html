@@ -5,12 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin RPS</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Rock Paper Scissors!</h1>
-    <button class="btn" id = "rock">Rock</button>
-    <button class="btn" id = "paper">Paper</button>
-    <button class="btn" id = "scissor">Scissor</button>
+
+<section class="game">
+
+    <div class="intro">
+        <h1>Rock Paper Scissor</h1>
+        <button>Let's Play</button>
+    </div>
+
+    <!-- Player1 & Computer title -->
+    <div class="match">
+            <div class="winner">Player Vs Computer</div>
+            <!-- Buttons -->
+            <div class="btns">
+                <div class="player-btns">
+                    <button class="rock">rock</button>
+                    <button class="paper">paper</button>
+                    <button class="scissor">scissor</button>
+                </div>
+                <div class="computer-btns">
+                    <button class="rock">rock</button>
+                    <button class="paper">paper</button>
+                    <button class="scissor">scissor</button>
+                </div>  
+            </div>
+            <!-- Hands -->
+            <div class="hands">
+                <img src="/assets/rock.png" alt="" class="player-hand">
+                <img src="/assets/rock.png" alt="" class="computer-hand">
+            </div>
+        </div>            
+        <!-- Score -->
+        <div class="score-board">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 </body>
 </html>

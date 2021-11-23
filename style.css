@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    background-color: #EDEADE;
+    font-family: sans-serif;
+}
+
+.score-board {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.score-board h2 {
+    font-size: 30px;
+}
+.score-board p {
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.intro {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+}
+.intro h1 {
+    font-size: 60px;
+    padding-top: 20px;
+}
+.intro button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border-color: black;
+    font-size: 30px;
+    background-color: #FAF9F6;
+    border-radius: 5px;
+}
+
+.match {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.winner {
+    text-align: center;
+    font-size: 80px;
+}
+.btns {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100vw;
+    height: 200px;
+}
+.player-btns button {
+    height: 50px;
+    width: 100px;
+    background: none;
+    border: none;
+    background-color: #FAF9F6;
+    border: solid black 3px;
+    border-radius: 5px;
+    font-size: 30px;
+    
+}
+.computer-btns button {
+    height: 50px;
+    width: 100px;
+    background: none;
+    border: none;
+    background-color: #FAF9F6;
+    border: solid black 3px;
+    border-radius: 5px;
+    font-size: 30px;
+}
